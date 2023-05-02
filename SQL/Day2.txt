@@ -1,0 +1,23 @@
+mysql> create database sales;
+Query OK, 1 row affected (0.05 sec)
+
+mysql> use sales;
+Database changed
+mysql> create table orders(
+    -> order_id int Primary Key,
+    -> customer_id int,
+    -> order_date Date,
+    -> order_total Decimal(10,2)
+    -> );
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> desc orders;
++-------------+---------------+------+-----+---------+-------+
+| Field       | Type          | Null | Key | Default | Extra |
++-------------+---------------+------+-----+---------+-------+
+| order_id    | int           | NO   | PRI | NULL    |       |
+| customer_id | int           | YES  |     | NULL    |       |
+| order_date  | date          | YES  |     | NULL    |       |
+| order_total | decimal(10,2) | YES  |     | NULL    |       |
++-------------+---------------+------+-----+---------+-------+
+4 rows in set (0.03 sec)
